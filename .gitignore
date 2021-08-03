@@ -1,0 +1,6 @@
+*.las
+*.imulog
+*.gpslog
+/.idea
+/7-28
+/venv
