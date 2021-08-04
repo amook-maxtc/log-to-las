@@ -66,9 +66,9 @@ def adjustTranslation(point, longitude, latitude, altitude): # X is E/W, Y is N/
     theta = (math.fabs(longitude)* (math.pi / 180) - LLA0[0])  # Change in longitude in rad. (Longitude final - longitude initial)
     phi0 = LLA0[1]
     phi1 = math.fabs(latitude) * (math.pi / 180)
-    dX = theta * ab * math.sqrt(1/(b2 + a2*math.tan(phi0))) # dX = r*theta, r = radius of equatorial line at given latitude
-    dY_r = (ab / math.sqrt(a2*math.pow(math.sin(phi0),2) + b2*math.pow(math.cos(phi0),2))) #Find radius of ellipse at given latitude
-    dY = dY_r * math.sqrt(2-2*math.cos(phi1-phi0)) #Law of cosines
+    dY = theta * ab * math.sqrt(1/(b2 + a2*math.tan(phi0))) # dX = r*theta, r = radius of equatorial line at given latitude
+    dX_r = (ab / math.sqrt(a2*math.pow(math.sin(phi0),2) + b2*math.pow(math.cos(phi0),2))) #Find radius of ellipse at given latitude
+    dX = dX_r * math.sqrt(2-2*math.cos(phi1-phi0)) #Law of cosines
     print("Theta is " + str(theta))
     print(phi0)
     print(phi1)
