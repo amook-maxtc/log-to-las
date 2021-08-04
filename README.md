@@ -6,10 +6,10 @@ This program takes the log files from [this project](https://github.com/amook-ma
 
 ![](docs/pp_workflow.PNG)
 
+## Rotation
+
 The three log files taken in are logs from the IMU, GPS, and Lidar. Each point is first adjusted for its rotation, transforming it from the vehicle frame to the local frame. 
 Taken from the [u-blox integration maunal](https://cdn.sparkfun.com/assets/learn_tutorials/1/1/7/2/ZED-F9R_Integrationmanual__UBX-20039643_.pdf):
-
-## Rotation
 
 ![](docs/frames.PNG)
 
