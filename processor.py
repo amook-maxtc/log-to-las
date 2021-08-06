@@ -145,7 +145,7 @@ def main():
             #point[0], point[1], point[2], = qSlerp.rotate((point[0], point[1], point[2]))
             point[0], point[1], point[2] = adjustRotation(point, imu_data[index][1], imu_data[index][2], imu_data[index][3])
         count += 1;
-        index -= 20
+        index -= 20 #Ensure correct imu data is selected--redo part of selection process every time
 
     # Apply GPS tranlsation
     print("Translating each point according to GPS location")
